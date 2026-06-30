@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 50%, #fdf2f8 100%);
+    color: #1a1a1a;
+    margin: 0;
+    min-height: 100vh;
+  }
+  h1, h2, h3, .font-display { font-family: 'Playfair Display', serif; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #f0f9ff; }
+  ::-webkit-scrollbar-thumb { background: linear-gradient(#38bdf8, #e91e63); border-radius: 3px; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#e91e63] to-[#f06292] hover:from-[#c2185b] hover:to-[#e91e63] text-white font-semibold py-2.5 px-6 rounded-xl transition-all duration-200 active:scale-95 shadow-md hover:shadow-lg;
+  }
+  .btn-outline {
+    @apply border-2 border-[#e91e63] text-[#e91e63] hover:bg-[#e91e63] hover:text-white font-semibold py-2.5 px-6 rounded-xl transition-all duration-200;
+  }
+  .btn-sky {
+    @apply bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 text-white font-semibold py-2.5 px-6 rounded-xl transition-all duration-200 shadow-md;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-sky-100 hover:shadow-md transition-shadow duration-200;
+  }
+  .card-pink {
+    @apply bg-white rounded-2xl shadow-sm border border-pink-100 hover:shadow-md hover:border-pink-200 transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full border border-sky-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#e91e63] focus:ring-2 focus:ring-pink-100 transition-all bg-white;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .product-card {
+    @apply bg-white rounded-2xl overflow-hidden border border-sky-100 hover:shadow-xl hover:border-pink-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer;
+  }
+  .section-title {
+    @apply text-2xl md:text-3xl font-display font-bold text-gray-900 mb-2;
+  }
+  .gradient-pink {
+    @apply bg-gradient-to-r from-[#e91e63] to-[#f06292];
+  }
+  .gradient-sky {
+    @apply bg-gradient-to-r from-sky-400 to-sky-600;
+  }
+  .gradient-mixed {
+    @apply bg-gradient-to-r from-sky-400 via-white to-pink-400;
+  }
+  .page-bg {
+    background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 40%, #fdf2f8 100%);
+  }
+}
+
+/* Range slider */
+input[type="range"] { accent-color: #e91e63; }
+
+/* Toast */
+.react-hot-toast > div { border-radius: 12px !important; }
+
+/* Swiper */
+.swiper-pagination-bullet-active { background: #e91e63 !important; }
+
+/* Page transitions */
+.page-enter { opacity: 0; transform: translateY(10px); }
+.page-enter-active { opacity: 1; transform: translateY(0); transition: opacity 300ms, transform 300ms; }
+
+/* Skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #e0f2fe 25%, #bae6fd 50%, #e0f2fe 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Stars */
+.star-filled { color: #fbbf24; }
+.star-empty { color: #e5e7eb; }
+
+/* Order status */
+.status-pending    { background: #fef9c3; color: #a16207; }
+.status-confirmed  { background: #dbeafe; color: #1d4ed8; }
+.status-shipped    { background: #f3e8ff; color: #7e22ce; }
+.status-delivered  { background: #dcfce7; color: #15803d; }
+.status-cancelled  { background: #fee2e2; color: #b91c1c; }
+
+/* Sky blue accent elements */
+.sky-accent { color: #0ea5e9; }
+.sky-bg { background-color: #f0f9ff; }
+.sky-border { border-color: #bae6fd; }
