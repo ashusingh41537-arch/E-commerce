@@ -1,0 +1,113 @@
+# ============================================
+# SUMAN E-COMMERCE - .gitignore
+# ============================================
+
+# ========================
+# SECRETS - KABHI PUSH MAT KARO
+# ========================
+# Real application.properties (passwords hain ismein)
+backend/src/main/resources/application.properties
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# ========================
+# JAVA / MAVEN (Backend)
+# ========================
+target/
+*.class
+*.jar
+*.war
+*.ear
+!**/src/main/**
+!**/src/test/**
+.mvn/wrapper/maven-wrapper.jar
+HELP.md
+spring-shell.log
+
+# ========================
+# NODE / NPM (Frontend)
+# ========================
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vite/
+
+# ========================
+# IDE FILES
+# ========================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# ========================
+# OS FILES
+# ========================
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+
+# ========================
+# LOGS
+# ========================
+logs/
+*.log
+log/
+
+# ========================
+# UPLOADS / MEDIA
+# ========================
+uploads/
+public/uploads/
+src/main/resources/static/uploads/
+
+# ========================
+# SSL / CERTIFICATES
+# ========================
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+
+# ========================
+# DATABASE BACKUPS
+# ========================
+*.sql.backup
+*.dump
+*.db
+*.sqlite
