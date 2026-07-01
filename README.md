@@ -226,4 +226,5 @@ client.subscribe('/user/queue/notifications', (msg) => {
 
 ---
 
-Made with ❤️ | Suman Beauty & Fashion © 2024
+Akshay Pratap Singh
+
